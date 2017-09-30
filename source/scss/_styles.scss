@@ -1,0 +1,176 @@
+/* Styles for App */
+
+@import "variables";
+body {
+    color: #444;
+    background: #f3f3f3;
+    font: normal 9px Arial, Helvetica, sans-serif;
+    margin: 2em;
+}
+
+header {
+    margin: 0 0 35px 10px;
+    width: 100%;
+    position: relative;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: normal;
+    text-shadow: #fff 0 1px 0;
+    margin: 0 0 0 0;
+    padding: 0;
+}
+
+// .container {
+//     max-width: 100%;
+//     height: 800px;
+//     position:relative;
+// }
+
+#chart {
+    clear: both;
+    width: 100%;
+    position: relative;
+}
+
+small {
+    color: #a3a3a3;
+    font-size: 12px;
+    position: absolute;
+    bottom: -2.8em;
+    left: 0;
+}
+
+a {
+    color: #a3a3a3;
+}
+
+span.label_year:hover {
+    cursor: ew-resize;
+}
+
+text.label {
+    fill: #444;
+    font-weight: bolder;
+}
+
+
+line.slope {
+    stroke: $gray;
+    stroke-width: 2;
+}
+
+.country {
+    .start {
+        opacity: 0;
+        text-anchor: end;
+    }
+
+    .circle_dif {
+        opacity: 0;
+    }
+
+    .end {
+        fill-opacity: 0;
+    }
+
+    .node {
+        stroke: $gray;
+        fill: $gray;
+        cursor: pointer;
+    }
+}
+
+.country.over {
+    .start {
+        opacity: 1;
+    }
+
+    .circle_dif {
+        opacity: 1;
+        rect {
+            stroke: $yellow;
+            fill: $yellow;
+        }
+    }
+
+    .end {
+        fill-opacity: 1;
+    }
+
+    text.label {
+        fill: black;
+        cursor: pointer;
+    }
+
+    line.slope {
+        stroke: $yellow;
+        stroke-width: 4;
+        opacity: 1;
+    }
+
+    .node {
+        stroke-width: 7px;
+        stroke: $yellow;
+        fill: $yellow;
+    }
+}
+
+.missing text.label {
+    opacity: 0.1;
+}
+
+.missing line.slope {
+    opacity: 0.1;
+}
+
+tspan {
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 25px;
+    margin-top: 25px;
+    font-weight: lighter;
+    color: #A3A3A3;
+}
+
+#primero {
+    float: left;
+    margin-left: 9%;
+}
+
+#segundo {
+    float: right;
+    margin-right: 26%;
+}
+
+.vertical_line {
+    stroke: $gray;
+    stroke-width: 2;
+}
+
+.node-group {
+    fill: #000;
+    font-size: 14px;
+    font-weight: 900;
+}
+
+.input-range {
+    display: none;
+}
+
+//slider
+// .input-range {
+//   -webkit-appearance: none;
+//   height: 200px;
+//   border-radius: 5px;
+//   // background: #ccc;
+//   outline: none;
+//   writing-mode: bt-lr; /* IE */
+//   -webkit-appearance: slider-vertical; /* WebKit */
+//   position: absolute;
+//   right: 10%;
+//   width: 1%;    
+// }

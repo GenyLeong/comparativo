@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>elecciones_comparativos - lanacion.com</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- for Iphone -->
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <!-- favicon -->
+    <link rel="icon" href="./favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="favicon.ico">
+    <!-- Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="copyright" content="2017 - LA NACION">
+    <meta name="title" content="elecciones_comparativos - 12.6.2017">
+    <meta name="description" content="">
+    <!-- Facebook metatags -->
+    <meta property="og:url" content="{URL DE ESTE ESPECIAL}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="elecciones_comparativos - LA NACION">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="{URL DE LA IMAGEN PRINCIPAL}">
+    <!-- Twitter cards -->
+    <meta name="twitter:url" content="{URL DE ESTE ESPECIAL}" />
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="elecciones_comparativos">
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:site" content="@LANACION">
+    <meta name="twitter:image" content="{URL DE LA IMAGEN PRINCIPAL}" />
+    <link rel="stylesheet" type="text/css" href="https://especiales.lanacion.com.ar/multimedia/proyectos/fonts/font.css">
+    <link rel="stylesheet" type="text/css" href="https://especiales.lanacion.com.ar/multimedia/proyectos/fonts/icons_v1/icons.css">
+    <!-- build:css -->
+   <!--  <link rel="stylesheet" href="css/slider.css">
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinFlat.css" /> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!-- endbuild -->
+    <!-- Google Analytics -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-621326-122', {
+        'name': 'especiales',
+        'alwaysSendReferrer': true
+    });
+    ga('especiales.send', 'pageview', location.pathname);
+    ga('create', 'UA-621326-98', 'auto');
+    ga('send', 'pageview', location.pathname);
+    ga('especiales.set', 'appName', document.title);
+    /** Track googleA events*/
+    window.trackEvent = function(eventName, label, value) {
+        var eventCategory = document.title
+            .replace(/\s?\-\s?la\s?naci(o|ó)n(\.com)?(\.ar)?/g, "")
+            .replace(/\s/g, "_");
+        var eventData = {
+            'hitType': 'event',
+            // 'eventCategory': "especiales_calculadora_procrear_2017",
+            'eventCategory': eventCategory,
+            'eventAction': eventName
+        };
+        if (label) {
+            eventData.eventLabel = label;
+        }
+        if (value) {
+            eventData.eventValue = value;
+        }
+        ga('especiales.send', eventData);
+    }
+
+    </script>
+    <!-- Google Analytics -->
+    <!-- Begin comScore Tag -->
+    <script>
+    var _comscore = _comscore || [];
+    _comscore.push({ c1: "2", c2: "6906398" });
+    (function() {
+        var s = document.createElement("script"),
+            el = document.getElementsByTagName("script")[0];
+        s.async = true;
+        s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js";
+        el.parentNode.insertBefore(s, el);
+    })();
+
+    </script>
+    <noscript>
+        <img src="http://b.scorecardresearch.com/p?c1=2&c2=6906398&cv=2.0&cj=1" />
+    </noscript>
+    <!-- End comScore Tag -->
+  <!--   <script src="js/d3.js"></script> -->
+</head>
+
+<body>
+    <div class="container clearfix">
+        <header>
+            <h1>
+        Diferencia de votos en el FPV entre PASO 2011 y 2015
+        </h1>
+            <h2 id="primero">2011</h2>
+            <h2 id="segundo">2015</h2>
+        </header>
+        <div id="chart">
+            <input class="input-range" type="range" step="1" value="0" min="0" max="23">
+        </div>        
+        <footer>
+            <a href="./templates/credits.html" class="btn_light ajax_modal" id="creditos">Créditos</a>
+        </footer>
+    </div>
+    <!-- end wrapper_all -->
+    <div id="append">
+        <!-- div for append dinamics contents... -->
+    </div>
+    <!-- LN LOADER -->
+    <div id="loader">
+        <div id="spinner" style="width: 60px; height: 120px; position: relative; left: 50%; top: 20%; margin-left:-30px; background: url('http://especiales.lanacion.com.ar/multimedia/proyectos/LN_loader/ln.svg') center no-repeat;"></div>
+    </div>
+    <!-- LN LOADER -->
+</body>
+
+</html>
+<!-- PYM -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.2.0/pym.v1.min.js"></script>
+<!-- PYM -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/spin.js/2.3.2/spin.min.js"></script>
+<script>
+var opts = { lines: 40, length: 2, width: 1, radius: 25, corners: 0.5, rotate: 1, color: "#006998", speed: 1, trail: 60, shadow: false, hwaccel: false, className: "spinner", zIndex: 2000000000, top: 0, left: 0 };
+var target = document.getElementById("spinner");
+var spinner = new Spinner(opts).spin(target);
+
+</script>
+<!-- vendors -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="js/slider.min.js"></script> -->
+<script src="https://mbostock.github.com/d3/d3.v2.min.js?2.8.1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.1/vue.min.js"></script>
+<script src="js/index.js"></script>
+<!-- build:js -->
+<script src="jsbuild/main.js"></script>
+<!-- endbuild -->
